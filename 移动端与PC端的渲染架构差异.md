@@ -41,4 +41,4 @@ TBR还有一个重要的特性，那就是它会将frameBuffer划分为多个til
 
 1. **批量读取/写入：** 对于IMR而言，依次连续执行指令，就类似于每次只读取一个数据，这样的操作执行n次；而对于TBR/TDBR而言，将所有指令执行完成后才进入下一阶段，就类似于一次性读取所有数据。这一设计是对带宽友好的。
 
-2. **Tile中的片上内存：**读写深度缓冲/颜色缓冲是非常消耗带宽的操作，对于IMR架构而言，在做深度测试时和Blending时都会存在读写FrameBuffer的情况，使用TBR后，因为渲染被切分为tile，而tile比较小，因此可以设计一种较快的内存，称为on chip memory。可以先将数据存储在tile上的on chip memory上，提升了读写性能。等所有操作完成后再写入FrameBuffer；
+2. **Tile中的片上内存：** 读写深度缓冲/颜色缓冲是非常消耗带宽的操作，对于IMR架构而言，在做深度测试时和Blending时都会存在读写FrameBuffer的情况，使用TBR后，因为渲染被切分为tile，而tile比较小，因此可以设计一种较快的内存，称为on chip memory。可以先将数据存储在tile上的on chip memory上，提升了读写性能。等所有操作完成后再写入FrameBuffer；
