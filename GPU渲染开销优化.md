@@ -61,7 +61,7 @@
 
 对于 LDR RGB 和 RGBA 纹理，大多数支持 OpenGL ES 3.1 或 Vulkan 的现代 Android GPU 也支持 ASTC 格式，如果你需要支持较旧的设备则推荐使用 ETC/ETC2
 
-> **注意：**对于不支持 ASTC 格式的较旧 Android 设备，纹理会被解压为未压缩的 32 位 RGBA 格式。这会增加内存占用，并可能降低在 CPU 上执行解压的速度。
+> **注意：** 对于不支持 ASTC 格式的较旧 Android 设备，纹理会被解压为未压缩的 32 位 RGBA 格式。这会增加内存占用，并可能降低在 CPU 上执行解压的速度。
 
 ### mipmap
 
